@@ -20,6 +20,20 @@ Flipkart Product Recommender is an end-to-end LLMOps project that recommends pro
 
 The project also includes production-oriented pieces such as Docker packaging, Kubernetes manifests, Prometheus metrics, and Grafana deployment files.
 
+## Application Preview
+
+### Web Interface
+
+<img src="img/front-end.png" alt="Flipkart Product Recommender web interface" width="900">
+
+### Chat Recommendation Flow
+
+<img src="img/Chat-section.png" alt="Chat interface showing a product recommendation interaction" width="900">
+
+### Follow-up Product Questions
+
+<img src="img/Chat-section_2.png" alt="Chat interface showing follow-up product recommendation questions" width="900">
+
 ## Features
 
 - Conversational product recommendation assistant
@@ -86,6 +100,7 @@ Product Recommendation Answer
 +-- chroma_db/                     # Persisted local vector database
 +-- templates/                     # Flask HTML templates
 +-- static/                        # CSS and frontend assets
++-- img/                           # README application screenshots
 +-- prometheus/                    # Prometheus Kubernetes manifests
 +-- grafana/                       # Grafana Kubernetes manifests
 +-- Dockerfile
