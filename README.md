@@ -236,4 +236,4 @@ This project is intended for educational and portfolio purposes. Add a license f
 
 ## Author
 
-Built as part of an LLMOps and AIOps learning project.
+Eduardo dos Santos Sousa. Built as part of an LLMOps and AIOps learning project.
