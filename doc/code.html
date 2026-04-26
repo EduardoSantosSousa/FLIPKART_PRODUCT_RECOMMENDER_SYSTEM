@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flipkart AI - Premium Shopping Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f7fafc",
+                    "surface-dim": "#d7dadc",
+                    "background": "#f7fafc",
+                    "surface-tint": "#0c56d0",
+                    "inverse-on-surface": "#eef1f3",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#0052cc",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#001f24",
+                    "on-surface-variant": "#434654",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "tertiary-container": "#5c5b5b",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e5e9eb",
+                    "secondary-fixed": "#9cf0ff",
+                    "on-tertiary-container": "#d5d3d2",
+                    "on-secondary-container": "#00616d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#181c1e",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "inverse-surface": "#2d3133",
+                    "surface-container": "#ebeef0",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001848",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "surface": "#f7fafc",
+                    "tertiary-fixed": "#e5e2e1",
+                    "tertiary": "#444343",
+                    "secondary-container": "#00e3fd",
+                    "inverse-primary": "#b2c5ff",
+                    "outline": "#737685",
+                    "on-surface": "#181c1e",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary": "#ffffff",
+                    "primary": "#003d9b",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary": "#006875",
+                    "on-primary-container": "#c4d2ff",
+                    "secondary-fixed-dim": "#00daf3",
+                    "outline-variant": "#c3c6d6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-low": "#f1f4f6",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-tertiary-fixed": "#1b1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "32px",
+                    "md": "20px",
+                    "gutter": "16px",
+                    "xl": "48px",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "margin-desktop": "40px",
+                    "xs": "8px"
+            },
+            "fontFamily": {
+                    "chat-message": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Manrope"
+                    ],
+                    "display-lg": [
+                            "Manrope"
+                    ],
+                    "title-sm": [
+                            "Manrope"
+                    ],
+                    "label-bold": [
+                            "Inter"
+                    ],
+                    "caption": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "chat-message": [
+                            "15px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "title-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-bold": [
+                            "13px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "caption": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .mesh-bg {
+            background-color: #f7fafc;
+            background-image: 
+                radial-gradient(at 40% 20%, hsla(210,100%,95%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,96%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(210,100%,95%,1) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .message-bot {
+            background: #ffffff;
+            box-shadow: 0 4px 24px -6px rgba(31, 41, 55, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-left: 3px solid #00daf3;
+        }
+        .message-user {
+            background: #003d9b;
+            color: #ffffff;
+        }
+        .pulse-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .5; transform: scale(0.8); }
+        }
+    </style>
+</head>
+<body class="mesh-bg text-on-surface min-h-screen flex flex-col font-chat-message">
+<!-- TopAppBar JSON -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 h-16 bg-white/80 backdrop-blur-md border-b border-white/50 shadow-[0_4px_10px_rgba(31,41,55,0.04)] font-manrope text-sm font-medium">
+<div class="flex items-center gap-2">
+<span class="text-xl font-black text-primary tracking-tight">Flipkart AI</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<button class="hover:bg-primary-fixed/50 p-2 rounded-full transition-colors scale-95 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">history</span>
+</button>
+<button class="hover:bg-primary-fixed/50 p-2 rounded-full transition-colors scale-95 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">help_outline</span>
+</button>
+<button class="hover:bg-primary-fixed/50 p-2 rounded-full transition-colors scale-95 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 pt-16">
+<!-- SideNavBar JSON -->
+<nav class="hidden lg:flex flex-col pt-20 pb-6 px-4 gap-2 h-screen w-72 rounded-r-lg border-r border-slate-200 bg-slate-50/40 backdrop-blur-xl font-manrope text-sm">
+<div class="mb-8 px-4">
+<h2 class="font-bold text-primary text-title-sm">Smart Assistant</h2>
+<p class="text-on-surface-variant font-caption">Expert Guidance</p>
+</div>
+<a class="bg-white/60 text-primary font-semibold shadow-sm rounded-lg px-4 py-3 flex items-center gap-3 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_comment</span>
+                New Chat
+            </a>
+<a class="text-slate-500 hover:text-slate-900 hover:bg-white/40 rounded-lg px-4 py-3 flex items-center gap-3 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+                Saved Recommendations
+            </a>
+<a class="text-slate-500 hover:text-slate-900 hover:bg-white/40 rounded-lg px-4 py-3 flex items-center gap-3 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">receipt_long</span>
+                Order History
+            </a>
+<a class="text-slate-500 hover:text-slate-900 hover:bg-white/40 rounded-lg px-4 py-3 flex items-center gap-3 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">psychology</span>
+                Expert Mode
+            </a>
+<div class="mt-auto px-4">
+<button class="w-full py-2 border border-outline-variant rounded-lg text-primary hover:bg-white/40 transition-colors font-label-bold">
+                    Clear Conversation
+                </button>
+</div>
+</nav>
+<!-- Main Chat Canvas -->
+<main class="flex-1 flex flex-col items-center justify-center p-4 md:p-8 pb-24 md:pb-8 max-w-[1000px] mx-auto w-full">
+<!-- Welcome State -->
+<div class="flex flex-col items-center text-center max-w-2xl mb-12">
+<div class="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center mb-6 relative">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<div class="absolute bottom-1 right-1 w-4 h-4 bg-secondary-fixed-dim rounded-full border-2 border-white pulse-dot"></div>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2">Hello! I'm your Smart Assistant.</h1>
+<p class="font-chat-message text-chat-message text-on-surface-variant">How can I help you find the perfect product today?</p>
+</div>
+<!-- Quick Actions -->
+<div class="flex flex-wrap justify-center gap-3 mb-12 w-full max-w-3xl">
+<button class="glass-panel px-6 py-3 rounded-full text-primary font-label-bold text-label-bold hover:bg-white transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">smartphone</span>
+                    Recommend a phone
+                </button>
+<button class="glass-panel px-6 py-3 rounded-full text-primary font-label-bold text-label-bold hover:bg-white transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">laptop_mac</span>
+                    Best laptop for students
+                </button>
+<button class="glass-panel px-6 py-3 rounded-full text-primary font-label-bold text-label-bold hover:bg-white transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">headphones</span>
+                    Top-rated headphones
+                </button>
+</div>
+<!-- Input Area -->
+<div class="w-full max-w-3xl mt-auto relative group">
+<div class="absolute inset-0 bg-secondary-fixed-dim/20 rounded-full blur-xl group-focus-within:bg-secondary-fixed-dim/30 transition-all"></div>
+<div class="glass-panel relative rounded-full flex items-center px-4 py-2 shadow-lg">
+<button class="p-3 text-outline hover:text-primary transition-colors rounded-full">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface font-chat-message text-chat-message px-4 placeholder:text-outline-variant" placeholder="Ask me anything..." type="text"/>
+<button class="p-3 text-outline hover:text-primary transition-colors rounded-full">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="ml-2 bg-gradient-to-r from-primary to-primary-fixed-variant text-on-primary p-3 rounded-full hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar JSON -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-6 pb-safe bg-white/90 backdrop-blur-lg rounded-t-2xl border-t border-slate-200 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] font-manrope text-[10px] font-semibold">
+<a class="flex flex-col items-center justify-center text-slate-400 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">storefront</span>
+            Shop
+        </a>
+<a class="flex flex-col items-center justify-center text-primary bg-blue-50/50 rounded-xl px-3 py-1 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+            AI Help
+        </a>
+<a class="flex flex-col items-center justify-center text-slate-400 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+            Cart
+        </a>
+<a class="flex flex-col items-center justify-center text-slate-400 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">person</span>
+            Profile
+        </a>
+</nav>
+</body></html>
