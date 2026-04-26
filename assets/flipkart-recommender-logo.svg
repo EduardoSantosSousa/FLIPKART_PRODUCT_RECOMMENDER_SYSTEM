@@ -1,0 +1,58 @@
+<svg width="960" height="260" viewBox="0 0 960 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flipkart Product Recommender</title>
+  <desc id="desc">A professional e-commerce recommendation logo with a shopping bag, product cards, and vector search nodes.</desc>
+  <defs>
+    <linearGradient id="bagGradient" x1="118" y1="38" x2="234" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A73E8"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="236" y1="54" x2="346" y2="175" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="24" width="315" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="10"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.047 0 0 0 0 0.094 0 0 0 0 0.176 0 0 0 0.16 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="260" rx="24" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="912" height="212" rx="20" fill="white" stroke="#E2E8F0"/>
+
+  <g filter="url(#shadow)">
+    <path d="M123 88C125.6 66.6 143.8 50.5 165.3 50.5H196.7C218.2 50.5 236.4 66.6 239 88L252.8 201.7C255.3 222.3 239.2 240.5 218.5 240.5H143.5C122.8 240.5 106.7 222.3 109.2 201.7L123 88Z" fill="url(#bagGradient)"/>
+    <path d="M153 91V80C153 64.5 165.5 52 181 52C196.5 52 209 64.5 209 80V91" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <rect x="142" y="119" width="78" height="10" rx="5" fill="white" fill-opacity="0.92"/>
+    <rect x="142" y="145" width="54" height="10" rx="5" fill="white" fill-opacity="0.72"/>
+    <circle cx="219" cy="168" r="17" fill="#FBBF24"/>
+    <path d="M212 168.5L217.2 173.7L227.6 161.8" stroke="#0F172A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="250" y="77" width="100" height="124" rx="18" fill="url(#cardGradient)"/>
+    <rect x="269" y="100" width="62" height="9" rx="4.5" fill="white" fill-opacity="0.95"/>
+    <rect x="269" y="123" width="43" height="9" rx="4.5" fill="white" fill-opacity="0.8"/>
+    <rect x="269" y="146" width="54" height="9" rx="4.5" fill="white" fill-opacity="0.8"/>
+    <circle cx="334" cy="182" r="31" fill="#0F172A"/>
+    <path d="M323 181L331 189L346 171" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g stroke="#94A3B8" stroke-width="3" stroke-linecap="round">
+    <path d="M358 124C390 111 418 111 449 127"/>
+    <path d="M357 158C390 176 417 176 449 158"/>
+    <path d="M448 127L475 105"/>
+    <path d="M448 158L475 181"/>
+  </g>
+  <circle cx="450" cy="127" r="8" fill="#1A73E8"/>
+  <circle cx="450" cy="158" r="8" fill="#0F766E"/>
+  <circle cx="478" cy="104" r="8" fill="#F59E0B"/>
+  <circle cx="478" cy="182" r="8" fill="#F97316"/>
+
+  <text x="520" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="800" fill="#0F172A">Flipkart Product</text>
+  <text x="520" y="156" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="800" fill="#0F172A">Recommender</text>
+  <text x="522" y="190" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="600" fill="#475569">RAG-powered recommendations from customer reviews</text>
+</svg>
